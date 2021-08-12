@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+}
+
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p.roboto.fifty {
+    font-family : 'Roboto',
+    sans-serif;
+    font-size: 40px;
+}
+
+.parent {
+    position: relative;
+}
+
+#background-image {
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    background-image: url("background.png");
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
