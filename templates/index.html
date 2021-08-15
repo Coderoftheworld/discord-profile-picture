@@ -12,7 +12,10 @@
             crossorigin="anonymous"
         />
         <!-- My CSS stylesheet -->
-        <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
+        <link
+            href="{{ url_for('static',filename='css/style.css') }}"
+            rel="stylesheet"
+        />
         <title>Discord Profile Picture</title>
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,19 +28,25 @@
     <body class="text-white">
         <div class="bg">
             <div id="main">
-                <p class="roboto fifty">Discord username:</p>
+                <p class="roboto fifty">Discord server invite:</p>
                 <!-- Text Input using Bootstrap -->
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <span class="input-group-text" id="basic-addon3">
+                        discord.gg/</span
+                    >
                     <input
                         type="text"
+                        placeholder="XXXXXXXX"
                         class="form-control"
-                        placeholder="Discord#0000"
-                        aria-label="Username"
-                        aria-describedby="basic-addon1"
+                        id="basic-url"
+                        aria-describedby="basic-addon3"
                     />
-                    <button class="btn btn-outline-secondary" type="button">
-                        Enter
+                    <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="button-addon2"
+                    >
+                        Send
                     </button>
                 </div>
             </div>
