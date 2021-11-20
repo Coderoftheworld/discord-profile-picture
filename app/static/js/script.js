@@ -7,9 +7,10 @@ function send() {
         headers: {'Content-Type': 'application/json',},
         method: "POST",
         body: JSON.stringify(data)
-    }).then(res => res.json()).then(data => {
+    })
+    .then(res => res.json()).then(data => {
         downloadLink = document.getElementById("download-link")
-        downloadLink.style.display = "unset"; downloadLink.href = data; downloadLink.download = "server-icon.png"
+        downloadLink.style.display = "unset"
     })
 
 }

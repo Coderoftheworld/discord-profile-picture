@@ -23,6 +23,10 @@ def scrape():
     for meta_tag in soup.find_all("meta"):
         try:
             if meta_tag["property"] == "og:image":
-                return jsonify(meta_tag["content"]), 200
+                image_url = meta_tag["content"]
+                r = requests.get(image_url)
+                with open('./app/static/images/server_icon.png', 'wb') as f:
+                    f.write(r.content)
+                    return jsonify("Worked : status 200 OK"), 200
         except KeyError:
             pass
