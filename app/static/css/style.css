@@ -43,3 +43,9 @@ div#padding-left {
     display: none;
 }
 
+small.text-danger {
+    padding-top: 14px;
+    display: block;
+    text-align: center;
+    display: none;
+}

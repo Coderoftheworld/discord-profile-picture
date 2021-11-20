@@ -24,9 +24,11 @@ def scrape():
         try:
             if meta_tag["property"] == "og:image":
                 image_url = meta_tag["content"]
+                if image_url == "https://discord.com/assets/652f40427e1f5186ad54836074898279.png":
+                    return jsonify("Invalid server link"), 422
                 r = requests.get(image_url)
                 with open('./app/static/images/server_icon.png', 'wb') as f:
                     f.write(r.content)
-                    return jsonify("Worked : status 200 OK"), 200
+                    return jsonify("OK"), 200
         except KeyError:
             pass
